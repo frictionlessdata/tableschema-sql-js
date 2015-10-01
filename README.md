@@ -10,7 +10,6 @@ var Sequelize = require('sequelize');
 var SchemaTable = require('jts-sql-js').SchemaTable;
 
 # your rows of data - maybe you loaded these from a CSV :-)
-# e.g. data = [ row for row in csv.DictReader(open('mycsv.csv')) ]
 var data = [
   {'foo': 3, 'bar': 'hello'},
   {'foo': 5, 'bar': 'bye'}
