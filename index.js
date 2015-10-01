@@ -18,7 +18,7 @@ module.exports = {
             that = this;
 
         stream.on('readable', function() {
-          // Add records to buffer from datapackage 1000 at a time
+          // Add records to buffer from datapackage "chunk_size" at a time
 
           var record = stream.read();
           for (var k in record) {
