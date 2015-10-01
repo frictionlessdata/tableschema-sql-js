@@ -39,7 +39,8 @@ table.create();
 table.load_iter(data);
 
 var sqlz_table = table.table;
-var res = engine.query('SELECT * FROM ' + 'foo_table');
 ```
 
 ## Tests
+
+`mocha`
