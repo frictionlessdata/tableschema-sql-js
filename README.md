@@ -44,4 +44,4 @@ table.create().then(function () {
 
 ## Tests
 
-`mocha`
+`npm test`
