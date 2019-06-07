@@ -25,7 +25,10 @@ var schema = {
     },
     {
       'name': 'bar',
-      'type': 'string'
+      'type': 'string',
+      'constraints': {
+          'required': true
+      }
     }
   ]
 };
