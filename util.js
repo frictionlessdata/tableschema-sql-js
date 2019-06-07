@@ -13,10 +13,14 @@ module.exports = {
 
     fs = s.fields;
     for (var i in fs) {
+    	var required = false;
+    	if (typeof fs[i].constraints !== 'undefined' && typeof fs[i].constraints['required'] !== 'undefined') {
+    		required = fs[i].constraints['required'];
+    	}
       sqlz_schema[fs[i].name] = {
         type: JTS_TYPE[fs[i].type],
         field: fs[i].name,
-        allowNull: true
+        allowNull: !required
       };
     }
     return sqlz_schema;
