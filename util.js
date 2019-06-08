@@ -9,7 +9,9 @@ module.exports = {
           'integer': Sequelize.BIGINT,
           'boolean': Sequelize.BOOLEAN,
           'number': Sequelize.FLOAT,
-          'date': Sequelize.STRING
+          'date': Sequelize.DATEONLY,
+          'datetime': Sequelize.DATE,
+          'time': Sequelize.TIME,
         };
 
     fs = s.fields;
