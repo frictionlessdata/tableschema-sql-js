@@ -3,10 +3,10 @@ var SchemaTable = require('./').SchemaTable;
 var streamify = require('stream-array');
 var fs = require('fs');
 
-var exampledb = 'example.db';
+var exampledb = './example.db';
 var data = [
-  {'foo': 3, 'bar': 'hello'},
-  {'foo': 5, 'bar': 'bye'}
+  {'foo': 3, 'bar': 'YES'},
+  {'foo': 5, 'bar': 'NO'}
 ];
 
 var schema = {
@@ -17,7 +17,11 @@ var schema = {
     },
     {
       'name': 'bar',
-      'type': 'string'
+      'type': 'string',
+	  'constraints': {
+		  'required': true,
+		  'enum': ['YES', 'NO']
+	  }
     }
   ]
 };
@@ -30,6 +34,7 @@ var engine = new Sequelize('', '', '', {
 var table = SchemaTable(engine, 'foo_table', schema);
 
 var assert = require("assert");
+var describe = require("describe");
 describe('Example Database', function() {
   describe('result.count', function () {
     it('should return 2 once data is loaded', function (done) {

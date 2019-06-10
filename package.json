@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "describe": "^1.2.0",
+    "mysql2": "^1.6.5"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "sequelize": "^5.8.7",
+    "sqlite3": "^4.0.8",
+    "stream-array": "^1.1.2"
+  }
+}
